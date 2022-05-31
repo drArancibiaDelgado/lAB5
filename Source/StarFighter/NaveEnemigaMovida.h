@@ -33,4 +33,7 @@ private:
 	 
 	UPROPERTY(EditAnywhere)
 	int velocidad = 1;
+
+
+	static const FName FireBinding;
 };

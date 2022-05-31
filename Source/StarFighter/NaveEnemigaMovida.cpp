@@ -4,6 +4,9 @@
 #include "NaveEnemigaMovida.h"
 #include "Math/Vector.h"
 
+
+//const FName ANaveEnemigaMovida::FireBinding("Fire");
+
 // Sets default values for this component's properties
 UNaveEnemigaMovida::UNaveEnemigaMovida()
 {
