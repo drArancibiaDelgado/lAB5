@@ -15,5 +15,4 @@ class STARFIGHTER_API ANaveTerrestreEnemiga01 : public ANaveTerrestre
 	GENERATED_BODY()
 public:
 	ANaveTerrestreEnemiga01();
-
 };

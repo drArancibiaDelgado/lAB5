@@ -61,8 +61,6 @@ ANaveAereaJugador::ANaveAereaJugador()
 	//	//UE_LOG(LogTemp, Warning, TEXT("SpawnLocation(X, Y) = %s, %s FireRotation(X, Y) =  s, s"), SpawnLocation.X, SpawnLocation.Y);
 	//	//UE_LOG(LogTemp, Warning, TEXT("World not nullptr"));
 	//}
-
-	LiftAmount = 0.0;
 }
 
 void ANaveAereaJugador::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -149,7 +147,7 @@ void ANaveAereaJugador::FireShot(FVector FireDirection)
 			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
 
 			UWorld* const World = GetWorld();
-			if (World != nullptr)
+			if (World!=nullptr)
 			{
 				// spawn the projectile
 				World->SpawnActor<AProyectil>(SpawnLocation, FireRotation);
@@ -209,14 +207,5 @@ void ANaveAereaJugador::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Oth
 		TakeItem(InventoryItem);
 
 	}
-}
-
-void ANaveAereaJugador::LiftCapsula()
-{
-
-	UE_LOG(LogActor, Warning, TEXT("Liftamount: %f"),LiftAmount)
-
-
-	//Mesh->AddImpulse(FVector(0, 0, 1000)) *Mesh->GetMass());
 }
 

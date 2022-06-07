@@ -45,12 +45,5 @@ public:
 
 	/** Returns ShipMeshComponent subobject **/
 	FORCEINLINE class UStaticMeshComponent* GetShipMeshComponent() const { return ShipMeshComponent; }
-	
 	FORCEINLINE void SetShipMeshComponent(class UStaticMeshComponent* _ShipMeshComponent) { ShipMeshComponent = _ShipMeshComponent; }
-
-
-	void ConstructLodging();
-	void SetLodgingBuilder();
-	//void LodgingCharacteristics();
-
 };

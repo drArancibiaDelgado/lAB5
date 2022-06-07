@@ -44,7 +44,7 @@ void ACapsulaManager::LiftRandomCapsula(float liftAmount)
 	int32 randomNumbre = FMath::RandRange(0, countCapsulas - 1);
 
 	ANaveAereaJugador* capsula = Capsulas[randomNumbre];
-	capsula->LiftAmount = liftAmount;
-	capsula->LiftCapsula();
+	/*capsula->LiftAmount = liftAmount;
+	capsula->LiftCapsula();*/
 }
 

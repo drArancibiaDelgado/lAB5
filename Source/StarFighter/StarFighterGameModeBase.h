@@ -19,13 +19,15 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
+
+	void SpawnNaveEnemiga();
+
+	virtual void Tick(float DeltaSeconds) override;
+public:
 	AStarFighterGameModeBase();
 
 	template<typename T>
 	T SpawnNave();
-
-	/*template<typename T>
-	T SpawnNaveTerrestreEnemiga01();*/
 
 
 };
@@ -35,9 +37,3 @@ T AStarFighterGameModeBase::SpawnNave() {
 	
 	return GetWorld()->SpawnActor<T>(FVector::ZeroVector, FRotator::ZeroRotator);
 }
-
-//template<typename T>
-//inline T AStarFighterGameModeBase::SpawnNaveTerrestreEnemiga01()
-//{
-//	return GetWorld()->SpawnActor<T>(FVector::ZeroVector, FRotator::ZeroRotator);
-//}

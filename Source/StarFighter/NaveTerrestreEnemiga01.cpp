@@ -2,14 +2,16 @@
 
 
 #include "NaveTerrestreEnemiga01.h"
-#include "NaveTerrestre.h"
-#include "Components/InputComponent.h"
-#include "Kismet/GameplayStatics.h"
-#include "Engine/World.h"
 
 ANaveTerrestreEnemiga01::ANaveTerrestreEnemiga01()
 {
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("/Engine/BasicShapes/Cone.Cone"));
+
 	
+	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+
+	ShipMeshComponent->SetStaticMesh(ShipMesh.Object);
+
 
 }
-

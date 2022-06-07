@@ -53,10 +53,6 @@ public:
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 		float FireRate;
 
-	UPROPERTY()
-		USceneComponent* Root;
-	UPROPERTY(EditAnywhere)
-		UStaticMeshComponent* Mesh;
 	//Inventario
 	UPROPERTY()
 		UInventoryComponent* ShipInventory;
@@ -69,17 +65,13 @@ public:
 
 	UFUNCTION()
 		virtual void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
-	UFUNCTION(BlueprintCallable)
-		void LiftCapsula();
+
 
 
 	/** Returns CameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
-	
-	UPROPERTY(BlueprintReadWrite)
-		float LiftAmount;
 
 private:
 
@@ -91,7 +83,5 @@ private:
 
 	float FireForwardValue;
 	float FireRightValue;
-
-	
 
 };
